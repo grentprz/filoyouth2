@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteAdmin - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>VoteAdmin</h1>
+                <p>System Control Panel</p>
+            </div>
+            
+            <div class="nav-section">
+                <h2>Dashboard</h2>
+                <ul class="nav-links">
+                    <li class="active"><a href="index.html">Dashboard</a></li>
+                    <li><a href="elections.html">Elections</a></li>
+                    <li><a href="candidates.html">Candidates</a></li>
+                    <li><a href="voters.html">Voters</a></li>
+                    <li><a href="results.html">Results & Analytics</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="settings.html">System Settings</a></li>
+                    <li><a href="audit.html">Audit Logs</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="content-header">
+                <h1>Dashboard</h1>
+                <div class="admin-info">
+                    <span>Administrator</span>
+                    <span>admin@votesystem.com</span>
+                </div>
+            </div>
+            
+            <p class="welcome-message">Welcome back! Here's what's happening with your voting system.</p>
+            
+            <!-- Stats Cards -->
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <h3>Total Elections</h3>
+                    <div class="stat-value">24</div>
+                    <div class="stat-change">+3 from last month</div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Active Voters</h3>
+                    <div class="stat-value">3,850</div>
+                    <div class="stat-change">+125 from last month</div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Total Votes Cast</h3>
+                    <div class="stat-value">12,847</div>
+                    <div class="stat-change">+88 from last month</div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>System Alerts</h3>
+                    <div class="stat-value alert">2</div>
+                    <div class="stat-change alert">Requires attention</div>
+                </div>
+            </div>
+            
+            <!-- Charts and Recent Elections -->
+            <div class="content-row">
+                <!-- Voting Trends -->
+                <div class="chart-section">
+                    <div class="chart-card">
+                        <h3>Voting Trends</h3>
+                        <div class="trends-chart">
+                            <div class="chart-bars">
+                                <div class="bar-container">
+                                    <div class="bar" style="height: 60%"></div>
+                                    <span class="month-label">Jan</span>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="bar" style="height: 80%"></div>
+                                    <span class="month-label">Feb</span>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="bar" style="height: 45%"></div>
+                                    <span class="month-label">Mar</span>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="bar" style="height: 70%"></div>
+                                    <span class="month-label">Apr</span>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="bar" style="height: 85%"></div>
+                                    <span class="month-label">May</span>
+                                </div>
+                                <div class="bar-container">
+                                    <div class="bar" style="height: 75%"></div>
+                                    <span class="month-label">Jun</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Election Distribution -->
+                <div class="distribution-section">
+                    <div class="chart-card">
+                        <h3>Election Distribution</h3>
+                        <div class="distribution-list">
+                            <div class="distribution-item">
+                                <span class="election-month">Feb</span>
+                                <span class="election-votes">1900 votes</span>
+                            </div>
+                            <div class="distribution-item">
+                                <span class="election-month">May</span>
+                                <span class="election-votes">1900 votes</span>
+                            </div>
+                            <div class="distribution-item">
+                                <span class="election-month">Jun</span>
+                                <span class="election-votes">2100 votes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Elections -->
+                <div class="recent-section">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Recent Elections</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="election-list">
+                                <div class="election-item">
+                                    <strong>Student Council Election 2024</strong>
+                                    <span class="election-date">Ends: 2024-12-15</span>
+                                </div>
+                                <div class="election-item">
+                                    <strong>Faculty Board Election</strong>
+                                    <span class="election-date">Ends: 2024-12-20</span>
+                                </div>
+                                <div class="election-item">
+                                    <strong>Club President Election</strong>
+                                    <span class="election-date">Ends: 2024-11-30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

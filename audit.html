@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Logs - VoteAdmin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>VoteAdmin</h1>
+                <p>System Control Panel</p>
+            </div>
+            
+            <div class="nav-section">
+                <h2>DASHBOARD</h2>
+                <ul class="nav-links">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="elections.html">Elections</a></li>
+                    <li><a href="candidates.html">Candidates</a></li>
+                    <li><a href="voters.html">Voters</a></li>
+                    <li><a href="results.html">Results & Analytics</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="settings.html">System Settings</a></li>
+                    <li class="active"><a href="audit-logs.html">Audit Logs</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="content-header">
+                <h1>Audit Logs & Security</h1>
+                <div class="admin-info">
+                    <span>Welcome, Admin</span>
+                </div>
+            </div>
+
+            <div class="welcome-message">
+                <p>Monitor system activities, track user actions, and review security events.</p>
+            </div>
+
+            <!-- Audit Logs Section -->
+            <div class="audit-container">
+                <div class="audit-section-header">
+                    <h2>Audit Logs</h2>
+                    <div class="alert-analytics">
+                        <span class="security-alerts">Security Alerts</span>
+                        <span class="log-analytics">Log Analytics</span>
+                    </div>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" placeholder="Search logs by action, user, or details...">
+                </div>
+
+                <div class="audit-table-wrapper">
+                    <table class="audit-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>User</th>
+                                <th>Action</th>
+                                <th>Category</th>
+                                <th>Severity</th>
+                                <th>IP Address</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-12-03 14:23:45</td>
+                                <td>✗ admin@university.edu</td>
+                                <td>Election Created</td>
+                                <td>Election Management</td>
+                                <td><span class="audit-severity-info">Info</span></td>
+                                <td>192.168.1.100</td>
+                                <td><button class="audit-action-btn">🔍</button></td>
+                            </tr>
+                            <tr>
+                                <td>2024-12-03 14:15:22</td>
+                                <td>✗ voter123@university.edu</td>
+                                <td>Vote Cast</td>
+                                <td>Writing</td>
+                                <td><span class="audit-severity-info">Info</span></td>
+                                <td>10.0.1.45</td>
+                                <td><button class="audit-action-btn">🔍</button></td>
+                            </tr>
+                            <tr>
+                                <td>2024-12-03 13:45:12</td>
+                                <td>✗ admin@university.edu</td>
+                                <td>User Access Granted</td>
+                                <td>Security</td>
+                                <td><span class="audit-severity-warning">Warning</span></td>
+                                <td>192.168.1.100</td>
+                                <td><button class="audit-action-btn">🔍</button></td>
+                            </tr>
+                            <tr>
+                                <td>2024-12-03 13:30:08</td>
+                                <td>✗ system</td>
+                                <td>Failed Login Attempt</td>
+                                <td>Security</td>
+                                <td><span class="audit-severity-critical">Critical</span></td>
+                                <td>203.0.113.45</td>
+                                <td><button class="audit-action-btn">🔍</button></td>
+                            </tr>
+                            <tr>
+                                <td>2024-12-03 12:15:33</td>
+                                <td>✗ admin@university.edu</td>
+                                <td>System Settings Changed</td>
+                                <td>System</td>
+                                <td><span class="audit-severity-info">Info</span></td>
+                                <td>192.168.1.100</td>
+                                <td><button class="audit-action-btn">🔍</button></td>
+                            </tr>
+                            <tr>
+                                <td>2024-12-03 11:45:18</td>
+                                <td>✗ candidate@university.edu</td>
+                                <td>Candidate Profile Updated</td>
+                                <td>Candidate Management</td>
+                                <td><span class="audit-severity-info">Info</span></td>
+                                <td>172.16.0.23</td>
+                                <td><button class="audit-action-btn">🔍</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

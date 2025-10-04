@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteAdmin - Election Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>VoteAdmin</h1>
+                <p>System Control Panel</p>
+            </div>
+            
+            <div class="nav-section">
+                <h2>Dashboard</h2>
+                <ul class="nav-links">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li class="active"><a href="elections.html">Elections</a></li>
+                    <li><a href="candidates.html">Candidates</a></li>
+                    <li><a href="voters.html">Voters</a></li>
+                    <li><a href="results.html">Results & Analytics</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="settings.html">System Settings</a></li>
+                    <li><a href="audit.html">Audit Logs</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="content-header">
+                <h1>Election Management</h1>
+                <div class="admin-info">
+                    <span>Administrator</span>
+                    <span>admin@votesystem.com</span>
+                </div>
+            </div>
+            
+            <p class="welcome-message">Create and manage elections, set voting periods, and configure election parameters.</p>
+
+            <div class="elections-grid">
+                <div class="election-card">
+                    <h3>Student Council Election 2024</h3>
+                    <p class="election-description">Annual student council representative election</p>
+                    
+                    <table class="election-table">
+                        <tr>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Candidates</th>
+                            <th>Eligible Voters</th>
+                        </tr>
+                        <tr>
+                            <td>12/1/2024</td>
+                            <td>12/15/2024</td>
+                            <td>8</td>
+                            <td>2500</td>
+                        </tr>
+                    </table>
+                    
+                    <p class="election-type"><strong>Type:</strong> Single Choice</p>
+                    
+                    <div class="action-buttons">
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                        <a href="#" class="btn">Edit</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+
+                <div class="election-card">
+                    <h3>Faculty Board Election</h3>
+                    <p class="election-description">Election for faculty board members</p>
+                    
+                    <table class="election-table">
+                        <tr>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Candidates</th>
+                            <th>Eligible Voters</th>
+                        </tr>
+                        <tr>
+                            <td>12/10/2024</td>
+                            <td>12/20/2024</td>
+                            <td>5</td>
+                            <td>150</td>
+                        </tr>
+                    </table>
+                    
+                    <p class="election-type"><strong>Type:</strong> Multiple Choice</p>
+                    
+                    <div class="action-buttons">
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                        <a href="#" class="btn">Edit</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+
+                <div class="election-card">
+                    <h3>Club President Election</h3>
+                    <p class="election-description">Election for student club president position</p>
+                    
+                    <table class="election-table">
+                        <tr>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Candidates</th>
+                            <th>Eligible Voters</th>
+                        </tr>
+                        <tr>
+                            <td>11/15/2024</td>
+                            <td>11/30/2024</td>
+                            <td>3</td>
+                            <td>1200</td>
+                        </tr>
+                    </table>
+                    
+                    <p class="election-type"><strong>Type:</strong> Ranked Choice</p>
+                    
+                    <div class="action-buttons">
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                        <a href="#" class="btn">Edit</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons" style="margin-top: 30px;">
+                <a href="#" class="btn btn-success">+ Create New Election</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

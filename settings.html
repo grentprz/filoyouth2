@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteAdmin - System Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>VoteAdmin</h1>
+                <p>System Control Panel</p>
+            </div>
+            
+            <div class="nav-section">
+                <h2>DASHBOARD</h2>
+                <ul class="nav-links">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="elections.html">Elections</a></li>
+                    <li><a href="candidates.html">Candidates</a></li>
+                    <li><a href="voters.html">Voters</a></li>
+                    <li><a href="results.html">Results & Analytics</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li class="active"><a href="settings.html">System Settings</a></li>
+                    <li><a href="audit.html">Audit Logs</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="content-header">
+                <h1>System Settings</h1>
+                <div class="admin-info">
+                    <span>Administrator</span>
+                    <span>admin@votesystem.com</span>
+                </div>
+            </div>
+            
+            <p class="welcome-message">Configure system parameters, security settings, and general preferences.</p>
+
+            <!-- Settings Tabs -->
+            <div class="settings-tabs">
+                <div class="settings-tab active" data-tab="general">General</div>
+                <div class="settings-tab" data-tab="security">Security</div>
+                <div class="settings-tab" data-tab="notifications">Notifications</div>
+                <div class="settings-tab" data-tab="backup">Backup</div>
+                <div class="settings-tab" data-tab="voting-rules">Voting Rules</div>
+                <div class="settings-tab" data-tab="maintenance">Maintenance</div>
+            </div>
+
+            <!-- General Tab Content -->
+            <div class="settings-tab-content active" id="general">
+                <div class="settings-section">
+                    <h3>General Settings</h3>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">System Name</label>
+                            <p class="setting-description">Display name for the voting system</p>
+                        </div>
+                        <div class="setting-control">
+                            <input type="text" class="setting-input" value="VoteAdmin" style="width: 200px;">
+                        </div>
+                    </div>
+
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">Default Language</label>
+                            <p class="setting-description">System interface language</p>
+                        </div>
+                        <div class="setting-control">
+                            <select class="setting-select">
+                                <option selected>English</option>
+                                <option>Spanish</option>
+                                <option>French</option>
+                                <option>German</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">Time Zone</label>
+                            <p class="setting-description">System time zone for elections</p>
+                        </div>
+                        <div class="setting-control">
+                            <select class="setting-select">
+                                <option selected>UTC-5 (Eastern Time)</option>
+                                <option>UTC-6 (Central Time)</option>
+                                <option>UTC-7 (Mountain Time)</option>
+                                <option>UTC-8 (Pacific Time)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-actions">
+                    <button class="btn btn-primary">Save General Settings</button>
+                    <button class="btn btn-secondary">Reset to Default</button>
+                </div>
+            </div>
+
+            <!-- Voting Rules Tab Content -->
+            <div class="settings-tab-content" id="voting-rules">
+                <div class="settings-section">
+                    <h3>Voting Rules & Policies</h3>
+                    
+                    <!-- Allow Multiple Voting -->
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">Allow Multiple Voting</label>
+                            <p class="setting-description">Allow voters to change their vote before election ends</p>
+                        </div>
+                        <div class="setting-control">
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Minimum Voting Age -->
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">Minimum Voting Age</label>
+                            <p class="setting-description">Minimum age requirement for voters</p>
+                        </div>
+                        <div class="setting-control">
+                            <input type="number" class="setting-input" value="18" min="16" max="25">
+                        </div>
+                    </div>
+
+                    <!-- Eligibility Criteria -->
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">Eligibility Criteria</label>
+                            <p class="setting-description">Requirements for voter eligibility</p>
+                        </div>
+                        <div class="setting-control">
+                            <textarea class="setting-textarea">Must be currently enrolled student or active faculty member with valid university ID.</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Allowed Voting Methods -->
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">Allowed Voting Methods</label>
+                            <p class="setting-description">Select available voting methods</p>
+                        </div>
+                        <div class="setting-control">
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked> Online Voting
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked> Paper Ballot
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked> Mobile App
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grace Period -->
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">Grace Period (minutes)</label>
+                            <p class="setting-description">Allow voting after official end time</p>
+                        </div>
+                        <div class="setting-control">
+                            <input type="number" class="setting-input" value="5" min="0" max="60">
+                        </div>
+                    </div>
+
+                    <!-- Allow Voting After End Time -->
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">Allow Voting After End Time</label>
+                            <p class="setting-description">Enable grace period functionality</p>
+                        </div>
+                        <div class="setting-control">
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="settings-actions">
+                    <button class="btn btn-primary">Save Voting Rules</button>
+                    <button class="btn btn-secondary">Reset to Default</button>
+                    <button class="btn btn-danger">Cancel</button>
+                </div>
+            </div>
+
+            <!-- Other Tabs (Placeholder Content) -->
+            <div class="settings-tab-content" id="security">
+                <div class="settings-section">
+                    <h3>Security Settings</h3>
+                    <p>Security configuration content goes here...</p>
+                </div>
+            </div>
+
+            <div class="settings-tab-content" id="notifications">
+                <div class="settings-section">
+                    <h3>Notification Settings</h3>
+                    <p>Notification configuration content goes here...</p>
+                </div>
+            </div>
+
+            <div class="settings-tab-content" id="backup">
+                <div class="settings-section">
+                    <h3>Backup Settings</h3>
+                    <p>Backup configuration content goes here...</p>
+                </div>
+            </div>
+
+            <div class="settings-tab-content" id="maintenance">
+                <div class="settings-section">
+                    <h3>Maintenance Settings</h3>
+                    <p>Maintenance configuration content goes here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Settings tabs functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const settingsTabs = document.querySelectorAll('.settings-tab');
+            const tabContents = document.querySelectorAll('.settings-tab-content');
+            
+            settingsTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs and contents
+                    settingsTabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+
+            // Toggle switch functionality
+            const toggleSwitches = document.querySelectorAll('.toggle-switch input');
+            toggleSwitches.forEach(toggle => {
+                toggle.addEventListener('change', function() {
+                    const parent = this.closest('.setting-item');
+                    if (this.checked) {
+                        parent.classList.add('enabled');
+                    } else {
+                        parent.classList.remove('enabled');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

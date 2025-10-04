@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteAdmin - Candidate Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>VoteAdmin</h1>
+                <p>System Control Panel</p>
+            </div>
+            
+            <div class="nav-section">
+                <h2>Dashboard</h2>
+                <ul class="nav-links">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="elections.html">Elections</a></li>
+                    <li class="active"><a href="candidates.html">Candidates</a></li>
+                    <li><a href="voters.html">Voters</a></li>
+                    <li><a href="results.html">Results & Analytics</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="settings.html">System Settings</a></li>
+                    <li><a href="audit.html">Audit Logs</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="content-header">
+                <h1>Candidate Management</h1>
+                <div class="admin-info">
+                    <span>Administrator</span>
+                    <span>admin@votesystem.com</span>
+                </div>
+            </div>
+            
+            <p class="welcome-message">Manage candidates for elections, add candidate information, and track performance.</p>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <label for="electionFilter">Filter by Election:</label>
+                <select id="electionFilter" class="filter-select">
+                    <option value="all">All Elections</option>
+                    <option value="student-council">Student Council Election 2024</option>
+                    <option value="faculty-board">Faculty Board Election</option>
+                    <option value="club-president">Club President Election</option>
+                </select>
+            </div>
+
+            <!-- Candidates Grid -->
+            <div class="candidates-grid">
+                <!-- Student Council Candidates -->
+                <div class="candidate-card" data-election="student-council">
+                    <div class="candidate-header">
+                        <h3>Sarah Johnson</h3>
+                        <span class="status-badge status-active">Active</span>
+                    </div>
+                    <p class="candidate-position">Student Council President</p>
+                    <div class="candidate-info">
+                        <p><strong>Election:</strong> Student Council Election 2024</p>
+                        <p><strong>Biography:</strong> Senior in Computer Science with leadership experience in various student organizations.</p>
+                        <p><strong>Current Votes:</strong> 245</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="#" class="btn">Edit</a>
+                    </div>
+                </div>
+
+                <div class="candidate-card" data-election="student-council">
+                    <div class="candidate-header">
+                        <h3>Michael Chen</h3>
+                        <span class="status-badge status-active">Active</span>
+                    </div>
+                    <p class="candidate-position">Student Council Vice President</p>
+                    <div class="candidate-info">
+                        <p><strong>Election:</strong> Student Council Election 2024</p>
+                        <p><strong>Biography:</strong> Junior in Business Administration focused on student advocacy and campus improvement.</p>
+                        <p><strong>Current Votes:</strong> 198</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="#" class="btn">Edit</a>
+                    </div>
+                </div>
+
+                <!-- Faculty Board Candidates -->
+                <div class="candidate-card" data-election="faculty-board">
+                    <div class="candidate-header">
+                        <h3>Emily Rodriguez</h3>
+                        <span class="status-badge status-completed">Completed</span>
+                    </div>
+                    <p class="candidate-position">Faculty Board Member</p>
+                    <div class="candidate-info">
+                        <p><strong>Election:</strong> Faculty Board Election</p>
+                        <p><strong>Biography:</strong> Professor of Mathematics with 15 years of academic experience.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="#" class="btn">Edit</a>
+                    </div>
+                </div>
+
+                <div class="candidate-card" data-election="faculty-board">
+                    <div class="candidate-header">
+                        <h3>Robert Williams</h3>
+                        <span class="status-badge status-completed">Completed</span>
+                    </div>
+                    <p class="candidate-position">Faculty Board Member</p>
+                    <div class="candidate-info">
+                        <p><strong>Election:</strong> Faculty Board Election</p>
+                        <p><strong>Biography:</strong> Department Chair of Political Science with expertise in governance systems.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="#" class="btn">Edit</a>
+                    </div>
+                </div>
+
+                <!-- Club President Candidates -->
+                <div class="candidate-card" data-election="club-president">
+                    <div class="candidate-header">
+                        <h3>David Park</h3>
+                        <span class="status-badge status-active">Active</span>
+                    </div>
+                    <p class="candidate-position">Club President</p>
+                    <div class="candidate-info">
+                        <p><strong>Election:</strong> Club President Election</p>
+                        <p><strong>Biography:</strong> Sophomore in Engineering with passion for community building and event organization.</p>
+                        <p><strong>Current Votes:</strong> 156</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="#" class="btn">Edit</a>
+                    </div>
+                </div>
+
+                <div class="candidate-card" data-election="club-president">
+                    <div class="candidate-header">
+                        <h3>Jessica Martinez</h3>
+                        <span class="status-badge status-active">Active</span>
+                    </div>
+                    <p class="candidate-position">Club President</p>
+                    <div class="candidate-info">
+                        <p><strong>Election:</strong> Club President Election</p>
+                        <p><strong>Biography:</strong> Junior in Communications with experience in student leadership and event planning.</p>
+                        <p><strong>Current Votes:</strong> 142</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="#" class="btn">Edit</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons" style="margin-top: 30px;">
+                <a href="#" class="btn btn-success">+ Add New Candidate</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const electionFilter = document.getElementById('electionFilter');
+            const candidateCards = document.querySelectorAll('.candidate-card');
+            
+            electionFilter.addEventListener('change', function() {
+                const selectedElection = this.value;
+                
+                candidateCards.forEach(card => {
+                    if (selectedElection === 'all' || card.getAttribute('data-election') === selectedElection) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

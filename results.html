@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteAdmin - Results & Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>VoteAdmin</h1>
+                <p>System Control Panel</p>
+            </div>
+            
+            <div class="nav-section">
+                <h2>DASHBOARD</h2>
+                <ul class="nav-links">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="elections.html">Elections</a></li>
+                    <li><a href="candidates.html">Candidates</a></li>
+                    <li><a href="voters.html">Voters</a></li>
+                    <li class="active"><a href="results.html">Results & Analytics</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="settings.html">System Settings</a></li>
+                    <li><a href="audit.html">Audit Logs</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="content-header">
+                <h1>Results & Analytics</h1>
+                <div class="admin-info">
+                    <span>Administrator</span>
+                    <span>admin@votesystem.com</span>
+                </div>
+            </div>
+            
+            <p class="welcome-message">View real-time voting results, analyze voter turnout, and generate detailed election reports.</p>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab active" data-tab="overview">Overview</div>
+                <div class="tab" data-tab="candidate-results">Candidate Results</div>
+                <div class="tab" data-tab="analytics">Analytics</div>
+            </div>
+
+            <!-- Overview Tab Content -->
+            <div class="tab-content active" id="overview">
+                <!-- Stats Cards -->
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>Total Votes</h3>
+                        <div class="stat-value">1,247</div>
+                        <div class="stat-change">of 2,500 eligible voters</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h3>Voter Turnout</h3>
+                        <div class="stat-value">49.9%</div>
+                        <div class="stat-change">Participation rate</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h3>Leading Candidate</h3>
+                        <div class="stat-value">Sarah Johnson</div>
+                        <div class="stat-change">43.5% of votes</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h3>Election Status</h3>
+                        <div class="stat-value">Active</div>
+                        <div class="stat-change">3 candidates</div>
+                    </div>
+                </div>
+
+                <!-- Charts Row -->
+                <div class="content-row">
+                    <!-- Vote Distribution -->
+                    <div class="chart-section">
+                        <div class="chart-card">
+                            <h3>Vote Distribution</h3>
+                            <div class="results-chart">
+                                <div class="pie-chart">
+                                    <div class="pie-segment" style="--percentage: 43.5; --color: #3498db;">
+                                        <span class="segment-label">Sarah Johnson</span>
+                                    </div>
+                                    <div class="pie-segment" style="--percentage: 31.9; --color: #e74c3c;">
+                                        <span class="segment-label">Michael Chen</span>
+                                    </div>
+                                    <div class="pie-segment" style="--percentage: 24.6; --color: #f39c12;">
+                                        <span class="segment-label">Emma Davis</span>
+                                    </div>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #3498db;"></span>
+                                        <span class="legend-text">Sarah Johnson (43.5%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #e74c3c;"></span>
+                                        <span class="legend-text">Michael Chen (31.9%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #f39c12;"></span>
+                                        <span class="legend-text">Emma Davis (24.6%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Voter Turnout Trends -->
+                    <div class="distribution-section">
+                        <div class="chart-card">
+                            <h3>Voter Turnout Trends</h3>
+                            <div class="turnout-chart">
+                                <div class="turnout-bars">
+                                    <div class="turnout-bar">
+                                        <span class="hour-label">8AM</span>
+                                        <div class="bar-container">
+                                            <div class="bar-fill" style="height: 30%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="turnout-bar">
+                                        <span class="hour-label">10AM</span>
+                                        <div class="bar-container">
+                                            <div class="bar-fill" style="height: 65%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="turnout-bar">
+                                        <span class="hour-label">12PM</span>
+                                        <div class="bar-container">
+                                            <div class="bar-fill" style="height: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="turnout-bar">
+                                        <span class="hour-label">2PM</span>
+                                        <div class="bar-container">
+                                            <div class="bar-fill" style="height: 70%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="turnout-bar">
+                                        <span class="hour-label">4PM</span>
+                                        <div class="bar-container">
+                                            <div class="bar-fill" style="height: 45%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Activity -->
+                    <div class="recent-section">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">Live Updates</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="activity-list">
+                                    <div class="activity-item">
+                                        <span class="activity-time">2:30 PM</span>
+                                        <span class="activity-text">15 new votes recorded</span>
+                                    </div>
+                                    <div class="activity-item">
+                                        <span class="activity-time">2:15 PM</span>
+                                        <span class="activity-text">Sarah Johnson extends lead</span>
+                                    </div>
+                                    <div class="activity-item">
+                                        <span class="activity-time">1:45 PM</span>
+                                        <span class="activity-text">Voter turnout reaches 49.9%</span>
+                                    </div>
+                                    <div class="activity-item">
+                                        <span class="activity-time">1:20 PM</span>
+                                        <span class="activity-text">Engineering department leads in participation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Candidate Results Tab Content -->
+            <div class="tab-content" id="candidate-results">
+                <div class="candidate-results-grid">
+                    <!-- Sarah Johnson -->
+                    <div class="candidate-result-card">
+                        <div class="candidate-header">
+                            <h3>Sarah Johnson</h3>
+                            <span class="vote-percentage">43.5%</span>
+                        </div>
+                        <div class="candidate-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Votes</span>
+                                <span class="stat-value">342</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Percentage</span>
+                                <span class="stat-value">43.5%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Leading In</span>
+                                <span class="stat-value">4 Departments</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 43.5%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Michael Chen -->
+                    <div class="candidate-result-card">
+                        <div class="candidate-header">
+                            <h3>Michael Chen</h3>
+                            <span class="vote-percentage">31.9%</span>
+                        </div>
+                        <div class="candidate-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Votes</span>
+                                <span class="stat-value">386</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Percentage</span>
+                                <span class="stat-value">31.9%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Leading In</span>
+                                <span class="stat-value">2 Departments</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 31.9%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Emma Davis -->
+                    <div class="candidate-result-card">
+                        <div class="candidate-header">
+                            <h3>Emma Davis</h3>
+                            <span class="vote-percentage">24.6%</span>
+                        </div>
+                        <div class="candidate-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Votes</span>
+                                <span class="stat-value">307</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Percentage</span>
+                                <span class="stat-value">24.6%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Leading In</span>
+                                <span class="stat-value">1 Department</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 24.6%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Results Table -->
+                <div class="table-container">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>Candidate</th>
+                                <th>Votes</th>
+                                <th>Percentage</th>
+                                <th>Department Performance</th>
+                                <th>Trend</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="candidate-name">Sarah Johnson</div>
+                                    <div class="candidate-position">Student Council President</div>
+                                </td>
+                                <td>342</td>
+                                <td>43.5%</td>
+                                <td>
+                                    <div class="dept-performance">
+                                        <span class="dept-score high">CS: 85%</span>
+                                        <span class="dept-score medium">Eng: 65%</span>
+                                    </div>
+                                </td>
+                                <td><span class="trend-up">↑ 2.3%</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="candidate-name">Michael Chen</div>
+                                    <div class="candidate-position">Student Council Vice President</div>
+                                </td>
+                                <td>386</td>
+                                <td>31.9%</td>
+                                <td>
+                                    <div class="dept-performance">
+                                        <span class="dept-score medium">Bus: 58%</span>
+                                        <span class="dept-score low">Arts: 42%</span>
+                                    </div>
+                                </td>
+                                <td><span class="trend-down">↓ 1.1%</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="candidate-name">Emma Davis</div>
+                                    <div class="candidate-position">Student Council Secretary</div>
+                                </td>
+                                <td>307</td>
+                                <td>24.6%</td>
+                                <td>
+                                    <div class="dept-performance">
+                                        <span class="dept-score high">Arts: 78%</span>
+                                        <span class="dept-score low">CS: 35%</span>
+                                    </div>
+                                </td>
+                                <td><span class="trend-up">↑ 0.8%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Analytics Tab Content -->
+            <div class="tab-content" id="analytics">
+                <div class="analytics-grid">
+                    <!-- Voting Participation Chart -->
+                    <div class="analytics-card">
+                        <h3>Voting Participation</h3>
+                        <div class="analytics-chart">
+                            <div class="chart-container">
+                                <div class="participation-chart">
+                                    <div class="chart-bar" style="height: 80%">
+                                        <span class="bar-label">Voted</span>
+                                        <span class="bar-value">1,247</span>
+                                    </div>
+                                    <div class="chart-bar" style="height: 60%">
+                                        <span class="bar-label">Registered</span>
+                                        <span class="bar-value">3,850</span>
+                                    </div>
+                                    <div class="chart-bar" style="height: 40%">
+                                        <span class="bar-label">Active</span>
+                                        <span class="bar-value">3,420</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Department Voting Rates -->
+                    <div class="analytics-card">
+                        <h3>Department Voting Rates</h3>
+                        <div class="analytics-chart">
+                            <div class="chart-container">
+                                <div class="department-rates">
+                                    <div class="rate-item">
+                                        <span class="dept-name">Computer Science</span>
+                                        <div class="rate-bar">
+                                            <div class="rate-fill" style="width: 75%"></div>
+                                            <span class="rate-percentage">75%</span>
+                                        </div>
+                                    </div>
+                                    <div class="rate-item">
+                                        <span class="dept-name">Engineering</span>
+                                        <div class="rate-bar">
+                                            <div class="rate-fill" style="width: 68%"></div>
+                                            <span class="rate-percentage">68%</span>
+                                        </div>
+                                    </div>
+                                    <div class="rate-item">
+                                        <span class="dept-name">Business</span>
+                                        <div class="rate-bar">
+                                            <div class="rate-fill" style="width: 55%"></div>
+                                            <span class="rate-percentage">55%</span>
+                                        </div>
+                                    </div>
+                                    <div class="rate-item">
+                                        <span class="dept-name">Liberal Arts</span>
+                                        <div class="rate-bar">
+                                            <div class="rate-fill" style="width: 62%"></div>
+                                            <span class="rate-percentage">62%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Registration Trends -->
+                    <div class="analytics-card">
+                        <h3>Registration Trends</h3>
+                        <div class="analytics-chart">
+                            <div class="chart-container">
+                                <div class="trend-chart">
+                                    <div class="trend-line">
+                                        <div class="month-point" style="bottom: 20%">Sep</div>
+                                        <div class="month-point" style="bottom: 35%">Oct</div>
+                                        <div class="month-point" style="bottom: 50%">Nov</div>
+                                        <div class="month-point" style="bottom: 80%">Dec</div>
+                                    </div>
+                                    <div class="trend-labels">
+                                        <span class="trend-min">0</span>
+                                        <span class="trend-max">200</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity Heatmap -->
+                    <div class="analytics-card">
+                        <h3>Activity Heatmap</h3>
+                        <div class="analytics-chart">
+                            <div class="chart-container">
+                                <div class="heatmap">
+                                    <div class="heatmap-row">
+                                        <span class="day-label">Mon</span>
+                                        <div class="heatmap-cells">
+                                            <div class="heatmap-cell low">8AM</div>
+                                            <div class="heatmap-cell medium">10AM</div>
+                                            <div class="heatmap-cell high">12PM</div>
+                                            <div class="heatmap-cell medium">2PM</div>
+                                            <div class="heatmap-cell low">4PM</div>
+                                        </div>
+                                    </div>
+                                    <div class="heatmap-row">
+                                        <span class="day-label">Tue</span>
+                                        <div class="heatmap-cells">
+                                            <div class="heatmap-cell low">8AM</div>
+                                            <div class="heatmap-cell high">10AM</div>
+                                            <div class="heatmap-cell high">12PM</div>
+                                            <div class="heatmap-cell medium">2PM</div>
+                                            <div class="heatmap-cell low">4PM</div>
+                                        </div>
+                                    </div>
+                                    <div class="heatmap-row">
+                                        <span class="day-label">Wed</span>
+                                        <div class="heatmap-cells">
+                                            <div class="heatmap-cell medium">8AM</div>
+                                            <div class="heatmap-cell high">10AM</div>
+                                            <div class="heatmap-cell high">12PM</div>
+                                            <div class="heatmap-cell high">2PM</div>
+                                            <div class="heatmap-cell medium">4PM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <a href="#" class="btn">Generate Report</a>
+                <a href="#" class="btn btn-secondary">Export Results</a>
+                <a href="#" class="btn btn-success">Refresh Data</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

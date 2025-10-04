@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteAdmin - Voter Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>VoteAdmin</h1>
+                <p>System Control Panel</p>
+            </div>
+            
+            <div class="nav-section">
+                <h2>DASHBOARD</h2>
+                <ul class="nav-links">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="elections.html">Elections</a></li>
+                    <li><a href="candidates.html">Candidates</a></li>
+                    <li class="active"><a href="voters.html">Voters</a></li>
+                    <li><a href="results.html">Results & Analytics</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="settings.html">System Settings</a></li>
+                    <li><a href="audit.html">Audit Logs</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="content-header">
+                <h1>Voter Management</h1>
+                <div class="admin-info">
+                    <span>Administrator</span>
+                    <span>admin@votesystem.com</span>
+                </div>
+            </div>
+            
+            <p class="welcome-message">Manage registered voters, track voting participation, and maintain voter records.</p>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search voters by name, email, department, or ID..." class="search-input">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <div class="search-results">
+                    <span id="resultsCount">Showing all 3 voters</span>
+                </div>
+            </div>
+
+            <!-- Voter List -->
+            <div class="voter-list-section">
+                <div class="section-header">
+                    <h2>Voter List</h2>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary">Import Voters</button>
+                        <button class="btn btn-secondary">Export Data</button>
+                        <button class="btn btn-success">Add Voter</button>
+                    </div>
+                </div>
+                
+                <table class="voter-table">
+                    <thead>
+                        <tr>
+                            <th>Voter ID</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Registration Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="voterTableBody">
+                        <tr class="voter-row" data-name="john smith" data-email="john.smith@email.com" data-department="computer science" data-id="v-1001">
+                            <td>V-1001</td>
+                            <td>
+                                <div class="voter-name">John Smith</div>
+                                <div class="voter-email">john.smith@email.com</div>
+                            </td>
+                            <td>Computer Science</td>
+                            <td>2024-10-15</td>
+                            <td><span class="status-badge status-voted">Voted</span></td>
+                            <td>
+                                <button class="btn btn-primary">View</button>
+                                <button class="btn btn-secondary">Edit</button>
+                            </td>
+                        </tr>
+                        <tr class="voter-row" data-name="maria garcia" data-email="maria.garcia@email.com" data-department="engineering" data-id="v-1002">
+                            <td>V-1002</td>
+                            <td>
+                                <div class="voter-name">Maria Garcia</div>
+                                <div class="voter-email">maria.garcia@email.com</div>
+                            </td>
+                            <td>Engineering</td>
+                            <td>2024-10-16</td>
+                            <td><span class="status-badge status-voted">Voted</span></td>
+                            <td>
+                                <button class="btn btn-primary">View</button>
+                                <button class="btn btn-secondary">Edit</button>
+                            </td>
+                        </tr>
+                        <tr class="voter-row" data-name="david johnson" data-email="david.johnson@email.com" data-department="business" data-id="v-1003">
+                            <td>V-1003</td>
+                            <td>
+                                <div class="voter-name">David Johnson</div>
+                                <div class="voter-email">david.johnson@email.com</div>
+                            </td>
+                            <td>Business</td>
+                            <td>2024-10-17</td>
+                            <td><span class="status-badge status-not-voted">Not Voted</span></td>
+                            <td>
+                                <button class="btn btn-primary">View</button>
+                                <button class="btn btn-secondary">Edit</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const voterRows = document.querySelectorAll('.voter-row');
+            const resultsCount = document.getElementById('resultsCount');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                let visibleCount = 0;
+                
+                voterRows.forEach(row => {
+                    const name = row.getAttribute('data-name');
+                    const email = row.getAttribute('data-email');
+                    const department = row.getAttribute('data-department');
+                    const id = row.getAttribute('data-id');
+                    
+                    // Check if search term matches any field
+                    const matches = name.includes(searchTerm) || 
+                                   email.includes(searchTerm) || 
+                                   department.includes(searchTerm) || 
+                                   id.includes(searchTerm);
+                    
+                    if (matches || searchTerm === '') {
+                        row.style.display = '';
+                        visibleCount++;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+                
+                // Update results count
+                if (searchTerm === '') {
+                    resultsCount.textContent = `Showing all ${visibleCount} voters`;
+                } else {
+                    resultsCount.textContent = `Found ${visibleCount} voter${visibleCount !== 1 ? 's' : ''} matching "${searchTerm}"`;
+                }
+            });
+            
+            // Focus on search input
+            searchInput.focus();
+        });
+    </script>
+</body>
+</html>
